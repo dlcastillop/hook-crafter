@@ -1,27 +1,52 @@
-# React + TypeScript + Vite
+# Hook Crafter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A template for creating a React hook library
 
-Currently, two official plugins are available:
+## Getting started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Clone the repo
 
-## Expanding the ESLint configuration
+Clone the TypeScript version.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+git clone https://github.com/dlcastillop/hook-crafter
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Or clone the JavaScript version.
+
+```bash
+git clone -b main-js https://github.com/dlcastillop/hook-crafter
+```
+
+### Install the dependencies
+
+```bash
+npm install
+```
+
+## Personalize the project
+
+### vite.config.ts
+
+Go to the `vite.config.ts` file and change the `name` prop to the name of your library. Also replace the substring `hook-crafter` with the name of your library in the `fileName` prop.
+
+### package.json
+
+Go to the `package.json` file and change the `name`, `description`, `repository`, `keywords`, `author`, `license`, `private` and `version` props to the ones of your library.
+
+Also replace the substring `hook-crafter` with the name of your library in the `main`, `modules`, `types` and `exports`.
+
+## Development
+
+All your hooks must be inside the `hooks` folder and you must export them in the `index.ts` file.
+
+This is the structure of the project.
+
+```php
+├── src/
+│   └── hooks/
+│       ├── useYourHook.ts
+│       └── index.ts
+├── package.json
+└── vite.config.ts
+```
