@@ -17,16 +17,8 @@ A template for creating a React hook library
 
 ### Clone the repo
 
-Clone the TypeScript version.
-
 ```bash
 git clone https://github.com/dlcastillop/hook-crafter
-```
-
-Or clone the JavaScript version.
-
-```bash
-git clone -b main-js https://github.com/dlcastillop/hook-crafter
 ```
 
 ### Install the dependencies
