@@ -2,6 +2,17 @@
 
 A template for creating a React hook library
 
+## Project structure
+
+```php
+├── src/
+│   └── hooks/
+│       ├── useYourHook.ts
+│       └── index.ts
+├── package.json
+└── vite.config.ts
+```
+
 ## Getting started
 
 ### Clone the repo
@@ -40,13 +51,8 @@ Also replace the substring `hook-crafter` with the name of your library in the `
 
 All your hooks must be inside the `hooks` folder and you must export them in the `index.ts` file.
 
-This is the structure of the project.
+## Generate the build
 
-```php
-├── src/
-│   └── hooks/
-│       ├── useYourHook.ts
-│       └── index.ts
-├── package.json
-└── vite.config.ts
+```bash
+npm run build
 ```
