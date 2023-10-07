@@ -1,10 +1,10 @@
 # Hook Crafter
 
-A template for creating a React hook library
+A template for creating a React hook library.
 
 ## Project structure
 
-```php
+```text
 ├── src/
 │   └── hooks/
 │       ├── useYourHook.ts
