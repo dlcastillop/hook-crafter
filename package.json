@@ -17,7 +17,7 @@
   "author": "Daniel Castillo <dlcastillo3015@gmail.com>",
   "license": "MIT",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "main": "dist/hook-crafter.umd.js",
   "module": "dist/hook-crafter.es.js",
