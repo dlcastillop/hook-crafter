@@ -1,22 +1,20 @@
 {
   "name": "hook-crafter",
-  "description": "A template for creating a React hook library",
+  "description": "Build your own React custom hooks faster",
   "repository": {
     "type": "git",
     "url": "https://github.com/dlcastillop/hook-crafter"
   },
   "keywords": [
-    "react",
-    "hooks",
-    "library",
-    "template",
-    "typescript",
-    "javascript",
-    "vite"
+    "react-hooks",
+    "react-custom-hook",
+    "react-custom-hooks",
+    "vite",
+    "typescript"
   ],
-  "author": "Daniel Castillo <dlcastillo3015@gmail.com>",
+  "author": "Daniel Castillo <daniel@dlcastillop.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "version": "1.1.0",
   "type": "module",
   "main": "dist/hook-crafter.umd.js",
