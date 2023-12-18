@@ -1,4 +1,4 @@
-# Hook Crafter
+# <img src="https://github.com/dlcastillop/dlcastillop/blob/main/logos/hook-crafter.png" width="40" height="40" /> Hook Crafter
 
 Build your own React custom hooks faster.
 
@@ -15,36 +15,154 @@ Build your own React custom hooks faster.
 
 ## Getting started
 
-### Clone the repo
-
-```bash
-git clone https://github.com/dlcastillop/hook-crafter
-```
-
 ### Install the dependencies
+
+Download the last release and install the dependencies:
 
 ```bash
 npm install
 ```
 
-## Personalize the project
+### Update the `vite.config.ts` file
 
-### vite.config.ts
+Go to the `vite.config.ts` file in the root directory and change the `name` prop to the name of your library. Also replace the substring `hook-crafter` with the name of your library in the `fileName` prop.
 
-Go to the `vite.config.ts` file and change the `name` prop to the name of your library. Also replace the substring `hook-crafter` with the name of your library in the `fileName` prop.
+```diff
+import react from "@vitejs/plugin-react";
+import path from "node:path";
+import { defineConfig } from "vite";
+import dts from "vite-plugin-dts";
 
-### package.json
+export default defineConfig({
+  plugins: [
+    react(),
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
+  build: {
+    lib: {
+      entry: path.resolve(__dirname, "src/hooks/index.ts"),
+-//   name: "hook-crafter",
++//   name: "your-library-name",
+      formats: ["es", "umd"],
+-//   fileName: (format) => `hook-crafter.${format}.js`,
++//   fileName: (format) => `your-library-name.${format}.js`,
+    },
+    rollupOptions: {
+      external: ["react", "react-dom", "styled-components"],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+          "styled-components": "styled",
+        },
+      },
+    },
+  },
+});
+```
+
+### Update the `package.json` file
 
 Go to the `package.json` file and change the `name`, `description`, `repository`, `keywords`, `author`, `license`, `private` and `version` props to the ones of your library.
 
 Also replace the substring `hook-crafter` with the name of your library in the `main`, `modules`, `types` and `exports`.
 
-## Development
+```diff
+{
+-// "name": "hook-crafter",
++// "name": "your-library-name",
+-// "description": "Build your own React custom hooks faster",
++// "description": "Your library description",
+    "repository": {
+        "type": "git",
+-//     "url": "https://github.com/dlcastillop/hook-crafter"
++//     "url": "your-repository-url"
+    },
+-// "keywords": ["react-hooks", "react-custom-hook", "react-custom-hooks", "vite", "typescript"],
++// "keywords": ["keyword-one", "keyword-two"],
+-// "author": "Daniel Castillo <daniel@dlcastillop.com>",
++// "author": "Your Name <your-email@domain.com>",
+-// "license": "MIT",
++// "license": "license-name",
+-// "private": false,
++// "private": true || false,
+-// "version": "1.1.0",
++// "version": "0.1.0",
+    "type": "module",
+-// "main": "dist/hook-crafter.umd.js",
++// "main": "dist/your-library-name.umd.js",
+-// "module": "dist/hook-crafter.es.js",
++// "module": "dist/your-library-name.es.js",
+-// "types": "dist/hook-crafter.d.ts",
++// "types": "dist/your-library-name.d.ts",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "vite-plugin-dts": "^3.6.4"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.45",
+        "@types/react-dom": "^18.2.18",
+        "@typescript-eslint/eslint-plugin": "^6.9.1",
+        "@typescript-eslint/parser": "^6.14.0",
+        "@vitejs/plugin-react": "^4.2.1",
+        "eslint": "^8.56.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.5",
+        "typescript": "^5.3.3",
+        "vite": "^4.5.0"
+    },
+    "exports": {
+        ".": {
+        "import": {
+-//         "default": "./dist/hook-crafter.es.js",
++//         "default": "./dist/your-library-name.es.js",
+-//         "types": "./dist/hook-crafter.d.ts"
++//         "types": "./dist/your-library-name.d.ts"
+        },
+        "require": {
+-//         "default": "./dist/hook-crafter.umd.js",
++//         "default": "./dist/your-library-name.umd.js",
+-//         "types": "./dist/hook-crafter.d.ts"
++//         "types": "./dist/your-library-name.d.ts"
+        }
+        }
+    },
+    "files": [
+        "dist",
+        "package.json"
+    ]
+}
+```
 
-All your hooks must be inside the `hooks` folder and you must export them in the `index.ts` file.
+### Create your hooks
 
-## Generate the build
+Create all your hooks inside the `src/hooks` folder and export them in the `index.ts` file. For reference, you can check the example hook in the `src/hooks` folder.
+
+## Publish your library to NPM
+
+### Generate the build
 
 ```bash
 npm run build
+```
+
+### Login to npm
+
+```bash
+npm login
+```
+
+### Publish your library
+
+```bash
+npm publish
 ```
