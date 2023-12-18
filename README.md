@@ -166,3 +166,11 @@ npm login
 ```bash
 npm publish
 ```
+
+## Contributions
+
+If you're interested in contributing to Hook Crafter, please read our [contributing docs](https://github.com/dlcastillop/hook-crafter/blob/main/CONTRIBUTING.md) before submitting a pull request.
+
+## Support
+
+Don't forget to leave a star!
