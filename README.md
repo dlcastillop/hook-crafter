@@ -1,6 +1,6 @@
 # Hook Crafter
 
-A template for creating a React hook library.
+Build your own React custom hooks faster.
 
 ## Project structure
 
