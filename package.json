@@ -45,14 +45,10 @@
   },
   "exports": {
     ".": {
-      "import": {
-        "default": "./dist/hook-crafter.es.js",
-        "types": "./dist/hook-crafter.d.ts"
-      },
-      "require": {
-        "default": "./dist/hook-crafter.umd.js",
-        "types": "./dist/hook-crafter.d.ts"
-      }
+      "import": "./dist/hook-crafter.es.js",
+      "require": "./dist/hook-crafter.umd.js",
+      "types": "./dist/hook-crafter.d.ts",
+      "default": "./dist/hook-crafter.es.js"
     }
   },
   "files": [
