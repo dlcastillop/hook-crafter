@@ -17,10 +17,18 @@ Build your own React custom hooks faster.
 
 ### Install the dependencies
 
-Download the last release and install the dependencies:
+Download the last release and install the dependencies with npm, yarn o pnpm:
 
 ```bash
 npm install
+```
+
+```bash
+yarn
+```
+
+```bash
+pnpm install
 ```
 
 ### Update the `vite.config.ts` file
@@ -151,8 +159,18 @@ Create all your hooks inside the `src/hooks` folder and export them in the `inde
 
 ### Generate the build
 
+Generate the build using npm, yarn or pnpm.
+
 ```bash
 npm run build
+```
+
+```bash
+yarn build
+```
+
+```bash
+pnpm build
 ```
 
 ### Login to npm
