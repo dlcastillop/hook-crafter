@@ -31,46 +31,6 @@ yarn
 pnpm install
 ```
 
-### Update the `vite.config.ts` file
-
-Go to the `vite.config.ts` file in the root directory and change the `name` prop to the name of your library. Also replace the substring `hook-crafter` with the name of your library in the `fileName` prop.
-
-```diff
-import react from "@vitejs/plugin-react";
-import path from "node:path";
-import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
-
-export default defineConfig({
-  plugins: [
-    react(),
-    dts({
-      insertTypesEntry: true,
-    }),
-  ],
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, "src/hooks/index.ts"),
--//   name: "hook-crafter",
-+//   name: "your-library-name",
-      formats: ["es", "umd"],
--//   fileName: (format) => `hook-crafter.${format}.js`,
-+//   fileName: (format) => `your-library-name.${format}.js`,
-    },
-    rollupOptions: {
-      external: ["react", "react-dom", "styled-components"],
-      output: {
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          "styled-components": "styled",
-        },
-      },
-    },
-  },
-});
-```
-
 ### Update the `package.json` file
 
 Go to the `package.json` file and change the `name`, `description`, `repository`, `keywords`, `author`, `license`, `private` and `version` props to the ones of your library.
