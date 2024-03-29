@@ -115,6 +115,8 @@ Also replace the substring `hook-crafter` with the name of your library in the `
 
 Create all your hooks inside the `src/hooks` folder and export them in the `index.ts` file. For reference, you can check the example hook in the `src/hooks` folder.
 
+> Do you need hooks for your project? Try [Nova.js: a collection of dependency-free React hooks](https://novajs.co/).
+
 ## Publish your library to NPM
 
 ### Generate the build
