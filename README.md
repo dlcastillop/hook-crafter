@@ -71,37 +71,31 @@ Also replace the substring `hook-crafter` with the name of your library in the `
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview"
     },
-    "dependencies": {
+    "devDependencies": {
+        "@types/react": "^18.2.43",
+        "@types/react-dom": "^18.2.17",
+        "@typescript-eslint/eslint-plugin": "^6.14.0",
+        "@typescript-eslint/parser": "^6.14.0",
+        "@vitejs/plugin-react": "^4.2.1",
+        "eslint": "^8.55.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.5",
+        "typescript": "^5.2.2",
+        "vite": "^5.0.8",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "vite-plugin-dts": "^3.6.4"
     },
-    "devDependencies": {
-        "@types/react": "^18.2.45",
-        "@types/react-dom": "^18.2.18",
-        "@typescript-eslint/eslint-plugin": "^6.9.1",
-        "@typescript-eslint/parser": "^6.14.0",
-        "@vitejs/plugin-react": "^4.2.1",
-        "eslint": "^8.56.0",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.4.5",
-        "typescript": "^5.3.3",
-        "vite": "^4.5.0"
-    },
     "exports": {
         ".": {
-        "import": {
--//         "default": "./dist/hook-crafter.es.js",
-+//         "default": "./dist/your-library-name.es.js",
--//         "types": "./dist/hook-crafter.d.ts"
-+//         "types": "./dist/your-library-name.d.ts"
-        },
-        "require": {
--//         "default": "./dist/hook-crafter.umd.js",
-+//         "default": "./dist/your-library-name.umd.js",
--//         "types": "./dist/hook-crafter.d.ts"
-+//         "types": "./dist/your-library-name.d.ts"
-        }
+-//         "import": "./dist/hook-crafter.es.js",
++//         "import": "./dist/your-library-name.es.js",
+-//         "require": "./dist/hook-crafter.umd.js",
++//         "require": "./dist/your-library-name.umd.js",
+-//         "types": "./dist/hook-crafter.d.ts",
++//         "types": "./dist/your-library-name.d.ts",
+-//         "default": "./dist/hook-crafter.es.js"
++//         "default": "./dist/your-library-name.es.js"
         }
     },
     "files": [
