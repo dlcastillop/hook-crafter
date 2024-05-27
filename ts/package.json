@@ -1,25 +1,11 @@
 {
   "name": "hook-crafter",
-  "description": "Build your own React custom hooks faster",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dlcastillop/hook-crafter"
-  },
-  "keywords": [
-    "react-hooks",
-    "react-custom-hook",
-    "react-custom-hooks",
-    "vite",
-    "typescript"
-  ],
-  "author": "Daniel Castillo <daniel@dlcastillop.com>",
-  "license": "MIT",
-  "private": false,
-  "version": "1.0.0",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "main": "dist/hook-crafter.umd.js",
-  "module": "dist/hook-crafter.es.js",
-  "types": "dist/hook-crafter.d.ts",
+  "main": "dist/main.umd.js",
+  "module": "dist/main.es.js",
+  "types": "dist/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -43,10 +29,10 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/hook-crafter.es.js",
-      "require": "./dist/hook-crafter.umd.js",
-      "types": "./dist/hook-crafter.d.ts",
-      "default": "./dist/hook-crafter.es.js"
+      "import": "./dist/main.es.js",
+      "require": "./dist/main.umd.js",
+      "types": "./dist/main.d.ts",
+      "default": "./dist/main.es.js"
     }
   },
   "files": [

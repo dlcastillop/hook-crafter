@@ -2,7 +2,6 @@ import react from "@vitejs/plugin-react";
 import path from "node:path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import packageJson from "./package.json";
 
 export default defineConfig({
   plugins: [
@@ -14,9 +13,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/hooks/index.ts"),
-      name: packageJson.name,
+      name: "main",
       formats: ["es", "umd"],
-      fileName: (format) => `${packageJson.name}.${format}.js`,
+      fileName: (format) => `main.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom", "styled-components"],
