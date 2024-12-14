@@ -1,5 +1,5 @@
 {
-  "name": "@novajslabs/create-hook-crafter",
+  "name": "create-hook-crafter",
   "version": "0.0.0",
   "description": "Set up your React hook library in seconds",
   "repository": {
@@ -20,7 +20,8 @@
   },
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "template"
   ],
   "type": "module",
   "exports": "./dist/index.js",

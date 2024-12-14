@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/hook-crafter.umd.js",
-  "module": "dist/hook-crafter.es.js",
-  "types": "dist/hook-crafter.d.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,26 +13,26 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@typescript-eslint/eslint-plugin": "^8.16.0",
-    "@typescript-eslint/parser": "^8.16.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.16.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "typescript": "^5.7.2",
-    "vite": "^6.0.1",
+    "vite": "^6.0.3",
     "vite-plugin-dts": "^4.3.0"
   },
   "exports": {
     ".": {
-      "import": "./dist/hook-crafter.es.js",
-      "require": "./dist/hook-crafter.umd.js",
-      "types": "./dist/hook-crafter.d.ts",
-      "default": "./dist/hook-crafter.es.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.es.js"
     }
   },
   "files": [
