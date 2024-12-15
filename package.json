@@ -4,7 +4,7 @@
   "description": "Set up your React hook library in seconds",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dlcastillop/hook-crafter"
+    "url": "https://github.com/novajslabs/hook-crafter"
   },
   "keywords": [
     "react-hooks",
