@@ -33,9 +33,11 @@ async function main() {
         await copy(templatePath, destinationPath);
       } catch (e) {
         logger.error("Error copying template. Exiting.");
+        process.exit(1);
       }
 
       updatePackageName(projectName, destinationPath);
+      logger.success("Project created successfully");
     });
 
   program.parse();
