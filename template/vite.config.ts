@@ -16,7 +16,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/hooks/index.ts"),
       name: packageJson.name,
       formats: ["es", "umd"],
-      fileName: (format) => `${packageJson.name}.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom", "styled-components"],
