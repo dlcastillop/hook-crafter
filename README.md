@@ -4,11 +4,64 @@ A Vite and TypeScript template for building your React hook library.
 
 ## Getting started
 
-Follow [the "Getting Started with Hook Crafter" guide](https://hook-crafter.dlcastillop.com/getting-started) in the documentation.
+### Create the project
+
+To create a Hook Crafter project, run:
+
+```sh
+npx create-hook-crafter
+```
+
+```sh
+npx create-hook-crafter
+```
+
+```sh
+pnpm dlx create-hook-crafter
+```
+
+Then follow the prompt.
+
+### Install the dependencies
+
+Install the dependencies with npm, yarn, or pnpm.
+
+```sh
+npm install
+```
+
+```sh
+yarn
+```
+
+```sh
+pnpm install
+```
+
+### Create your hooks
+
+Create all your hooks inside the `src/hooks` directory.
+
+```ts
+import { useState } from "react";
+
+export const useCountUp = (increase: number) => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => setCount(count + increase);
+  return { count, increment };
+};
+```
+
+And export them in the `index.ts` file.
+
+```ts
+export * from "./useCountUp";
+```
 
 ## Questions
 
-For questions and support please [open a discussion](https://github.com/dlcastillop/hook-crafter/discussions).
+For questions and support please [open a discussion](https://github.com/novajslabs/hook-crafter/discussions).
 
 ## Support
 
@@ -16,16 +69,16 @@ You can support this project in several ways:
 
 ### Star us
 
-Star [this repo](https://github.com/dlcastillop/hook-crafter).
+Star [this repo](https://github.com/novajslabs/hook-crafter).
 
 ### Share
 
-- [LinkedIn](http://www.linkedin.com/shareArticle?mini=true&url=https://hook-crafter.dlcastillop.com/)
-- [WhatsApp](https://api.whatsapp.com/send?text=https://hook-crafter.dlcastillop.com/)
-- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://hook-crafter.dlcastillop.com/)
-- [X](https://twitter.com/intent/tweet?url=https://hook-crafter.dlcastillop.com/)
-- [Reddit](https://www.reddit.com/submit?url=https://hook-crafter.dlcastillop.com/)
+- [LinkedIn](http://www.linkedin.com/shareArticle?mini=true&url=https://hook-crafter.novajs.co/)
+- [WhatsApp](https://api.whatsapp.com/send?text=https://hook-crafter.novajs.co/)
+- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://hook-crafter.novajs.co/)
+- [X](https://twitter.com/intent/tweet?url=https://hook-crafter.novajs.co/)
+- [Reddit](https://www.reddit.com/submit?url=https://hook-crafter.novajs.co/)
 
 ## License
 
-[MIT](https://github.com/dlcastillop/hook-crafter/blob/main/LICENSE)
+[MIT](https://github.com/novajslabs/hook-crafter/blob/main/LICENSE)
