@@ -13,10 +13,6 @@ npx create-hook-crafter
 ```
 
 ```sh
-npx create-hook-crafter
-```
-
-```sh
 pnpm dlx create-hook-crafter
 ```
 
